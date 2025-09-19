@@ -1,0 +1,22 @@
+# Python
+venv/
+*.pyc
+__pycache__/
+.env
+
+# Django
+media/
+staticfiles/
+
+# Node
+node_modules/
+dist/
+.angular/
+.env.local
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
