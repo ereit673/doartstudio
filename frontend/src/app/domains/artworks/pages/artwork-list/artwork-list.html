@@ -1,0 +1,19 @@
+<h2>Artworks</h2>
+<div>
+  @for (artwork of artworkStore.items(); track $index) {
+  <img [src]="artwork.hero_image" [alt]="artwork.title" />
+  <h3>{{ artwork.title }}</h3>
+  @if (artwork.width_cm && artwork.height_cm) {
+  <p>{{ artwork.width_cm }} x {{ artwork.height_cm }} cm</p>
+  }
+  <strong>{{ artwork.price }}</strong>
+  @if (artwork.sold_out) {
+  <span>Sold out</span>
+  } }
+</div>
+
+@if (artworkStore.nextPage() && !artworkStore.loading()) {
+<button (click)="loadMore()">Load more</button>
+} @if(artworkStore.loading()){
+<div>Loading...</div>
+}
