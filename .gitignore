@@ -20,3 +20,9 @@ dist/
 # IDE
 .vscode/
 .idea/
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+.env.local
